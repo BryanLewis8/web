@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brosisus - Plateforme de Logement</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1 id="header-title">Brosisus</h1>
+        <p id="header-desc">Votre plateforme pour logement et messagerie anonyme</p>
+        <select id="language-selector">
+            <option value="fr">Français</option>
+            <option value="en">English</option>
+            <option value="de">Deutsch</option>
+            <option value="es">Español</option>
+        </select>
+    </header>
+
+    <main>
+        <section id="home">
+            <h2 id="choose-option">Choisissez une option</h2>
+            <button onclick="showSection('locataire')">Je cherche un logement</button>
+            <button onclick="showSection('proprietaire')">Je veux publier un logement</button>
+            <button onclick="showSection('messagerie')">Messagerie Anonyme</button>
+        </section>
+
+        <section id="locataire-section" class="hidden">
+            <h2>Demande Locataire</h2>
+            <form id="locataire-form">
+                <input type="text" id="name-locataire" placeholder="Nom" required>
+                <input type="text" id="contact-locataire" placeholder="Contact" required>
+                <input type="text" id="city-locataire" placeholder="Ville" required>
+                <input type="number" id="budget-locataire" placeholder="Budget Max" required>
+                <textarea id="description-locataire" placeholder="Description"></textarea>
+                <button type="submit">Soumettre</button>
+            </form>
+        </section>
+
+        <section id="proprietaire-section" class="hidden">
+            <h2>Publication Propriétaire</h2>
+            <form id="proprietaire-form">
+                <input type="text" id="name-proprietaire" placeholder="Nom" required>
+                <input type="text" id="contact-proprietaire" placeholder="Contact" required>
+                <input type="text" id="city-proprietaire" placeholder="Ville" required>
+                <input type="number" id="rent-proprietaire" placeholder="Loyer" required>
+                <textarea id="description-proprietaire" placeholder="Description"></textarea>
+                <button type="submit">Publier</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Brosisus</p>
+    </footer>
+    <script src="app.js"></script>
+</body>
+</html>
